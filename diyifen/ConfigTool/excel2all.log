@@ -1,0 +1,21 @@
+[excel2all] convert-hook onStart
+[excel2all] 开始表转换
+读取缓存数据
+开始缓存处理...
+缓存处理时间:517ms,0.517s
+[预处理数据时间:708ms,0.708]
+convert-hook onParseBefore
+[开始解析]:数量[2]
+[解析]
+[parseTable|解析文件]=> D:/Work/ShenLong/SLG/AfkGit/number/release/language/Language_0818 更新加载.xlsx
+|=[parseSheet|解析分表]=> 测试
+[parseTable|解析文件]=> D:/Work/ShenLong/SLG/AfkGit/number/release/language/Language_0818_宝具分解.xlsx
+|=[parseSheet|解析分表]=> Sheet1
+[解析时间]:65
+开始进行转换解析结果
+[outputTransform |转换解析结果]请稍等...
+转换解析结果结束:9ms,0.009s
+开始写入文件:0/2
+[写入文件] 进度:(1/2) 路径:D:\Work\ShenLong\SLG\AfkGit\client\sub-proj\preload\libs\BAfkTableInterfaces.d.ts
+[写入文件] 进度:(2/2) 路径:D:\Work\ShenLong\SLG\AfkGit\client\bin\res\zip\lo\tlogin.json
+写入结束~

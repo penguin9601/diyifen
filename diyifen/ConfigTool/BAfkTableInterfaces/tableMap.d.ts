@@ -1,0 +1,349 @@
+interface ITBase<T> { [key:string]:T}
+interface IT_TableMap {
+	readonly GameConfigSetting?: ITBase<IT_GameConfigSetting>;
+	readonly WeightSetting?: ITBase<IT_WeightSetting>;
+	readonly AdConfigSetting?: ITBase<IT_AdConfigSetting>;
+	readonly AdSetting?: ITBase<IT_AdSetting>;
+	readonly CashCardSetting?: ITBase<IT_CashCardSetting>;
+	readonly CashCardTypeSetting?: ITBase<IT_CashCardTypeSetting>;
+	readonly FlyGiftConfigSetting?: ITBase<IT_FlyGiftConfigSetting>;
+	readonly FlyGiftViewSetting?: ITBase<IT_FlyGiftViewSetting>;
+	readonly ItemSetting?: ITBase<IT_ItemSetting>;
+	readonly LanguageSetting?: ITBase<IT_LanguageSetting>;
+	readonly LanguageTypeSetting?: ITBase<IT_LanguageTypeSetting>;
+	readonly LifeSetting?: ITBase<IT_LifeSetting>;
+	readonly PrizeExchangeItemSetting?: ITBase<IT_PrizeExchangeItemSetting>;
+	readonly PrizeExchangeSetting?: ITBase<IT_PrizeExchangeSetting>;
+	readonly PrizeLuckySetting?: ITBase<IT_PrizeLuckySetting>;
+	readonly PrizeSignSetting?: ITBase<IT_PrizeSignSetting>;
+	readonly RedeemSetting?: ITBase<IT_RedeemSetting>;
+	readonly AmazonRewardGradeSetting?: ITBase<IT_AmazonRewardGradeSetting>;
+	readonly AmazonRewardSetting?: ITBase<IT_AmazonRewardSetting>;
+	readonly PaypalRewardGradeSetting?: ITBase<IT_PaypalRewardGradeSetting>;
+	readonly PaypalRewardSetting?: ITBase<IT_PaypalRewardSetting>;
+	readonly SignSetting?: ITBase<IT_SignSetting>;
+	readonly TaskConfigSetting?: ITBase<IT_TaskConfigSetting>;
+	readonly TaskSetting?: ITBase<IT_TaskSetting>;
+	readonly PaypalBarSetting?: ITBase<IT_PaypalBarSetting>;
+	readonly TreeAnimSetting?: ITBase<IT_TreeAnimSetting>;
+	readonly TreeConfigSetting?: ITBase<IT_TreeConfigSetting>;
+	readonly TurnSetting?: ITBase<IT_TurnSetting>;
+}
+interface IT_GameConfigSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 键 */
+	readonly key?: string;
+	/** 值 */
+	readonly value?: string;
+}
+interface IT_WeightSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 权重 */
+	readonly weight?: number;
+	/** 值 */
+	readonly value?: string;
+}
+interface IT_AdConfigSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 键 */
+	readonly key?: string;
+	/** 值 */
+	readonly value?: string;
+}
+interface IT_AdSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 键 */
+	readonly name?: string;
+	/** 点击事件 */
+	readonly click?: string;
+	/** 播放事件 */
+	readonly show?: string;
+	/** 完成事件 */
+	readonly complete?: string;
+}
+interface IT_CashCardSetting {
+	/** 标识 */
+	readonly id?: string;
+	/** 卡类型 */
+	readonly type?: string;
+	/** 获得次数 */
+	readonly times?: number;
+	/** 面值 */
+	readonly value?: number;
+}
+interface IT_CashCardTypeSetting {
+	/** 标识 */
+	readonly id?: string;
+	/** 类型 */
+	readonly type?: string;
+	/** 通用领取界面资源文件夹名 */
+	readonly fileName?: string;
+}
+interface IT_FlyGiftConfigSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 键 */
+	readonly key?: string;
+	/** 值 */
+	readonly value?: string;
+}
+interface IT_FlyGiftViewSetting {
+	/** 标识 */
+	readonly id?: string;
+	/** 奖励随机权重id组 */
+	readonly weightIds?: string;
+}
+interface IT_ItemSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 道具code */
+	readonly code?: string;
+	/** 计数类型 
+int=整形
+float=小数型 */
+	readonly numType?: string;
+	/** 道具名称 */
+	readonly name?: string;
+	/** 描述 */
+	readonly desc?: string;
+	/** 额外属性 */
+	readonly extra?: string;
+	/** 初始数量 */
+	readonly defAmount?: float;
+	/** 资源名 */
+	readonly resName?: string;
+}
+interface IT_LanguageSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 中文 */
+	readonly cn?: string;
+	/** 英文 */
+	readonly en?: string;
+}
+interface IT_LanguageTypeSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 类型 */
+	readonly type?: string;
+	/** 描述 */
+	readonly desc?: string;
+}
+interface IT_LifeSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 道具code */
+	readonly code?: string;
+	/** 名字 */
+	readonly name?: string;
+	/** 初始数量 */
+	readonly defAmount?: number;
+	/** 数量上限 */
+	readonly maxAmount?: number;
+	/** 回复时间(秒) */
+	readonly upTime?: number;
+	/** 回复数量（个数） */
+	readonly upAmount?: number;
+	/** 资源名 */
+	readonly resName?: string;
+}
+interface IT_PrizeExchangeItemSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 花费 */
+	readonly cost?: string;
+	/** 奖励 */
+	readonly reward?: string;
+}
+interface IT_PrizeExchangeSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 花费 */
+	readonly cost?: string;
+	/** 观看广告次数 */
+	readonly adTimes?: number;
+	/** 限制时间(秒) */
+	readonly timeLimit?: number;
+}
+interface IT_PrizeLuckySetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 非网赚奖励 */
+	readonly reward?: string;
+	/** 中奖权重 */
+	readonly weight?: number;
+	/** 显示道具名称 */
+	readonly showName?: number;
+	/** 缩放比例 */
+	readonly scale?: float;
+}
+interface IT_PrizeSignSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 天数 */
+	readonly day?: number;
+	/** 奖励 */
+	readonly reward?: string;
+	/** 缩放比例 */
+	readonly scale?: float;
+	/** 打点事件 */
+	readonly logEventName?: string;
+}
+interface IT_RedeemSetting {
+	/** 标识 */
+	readonly id?: string;
+	/** 类型 */
+	readonly rewardType?: string;
+	/** 提现金额 */
+	readonly rewardAmount?: float;
+	/** 通用领取界面资源文件夹名 */
+	readonly fileName?: string;
+	/** 金额颜色 */
+	readonly MoneyColor?: string;
+	/** 观看广告次数 */
+	readonly adTimes?: number;
+	/** 限制时间(秒) */
+	readonly timeLimit?: number;
+	/** 提现按钮点击事件 */
+	readonly redeemBtnEventName?: string;
+	/** 提交按钮点击事件 */
+	readonly submitInfoEventName?: string;
+	/** 关闭按钮点击事件 */
+	readonly closeInfoEventName?: string;
+}
+interface IT_AmazonRewardGradeSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 阶段总额 */
+	readonly totalValue?: float;
+	/** 道具类型 */
+	readonly type?: string;
+	/** 阶段 */
+	readonly groupId?: number;
+	/** 最小随机值 */
+	readonly minValue?: float;
+	/** 最大随机值 */
+	readonly maxValue?: float;
+}
+interface IT_AmazonRewardSetting {
+	/** 阶段（m） */
+	readonly id?: number;
+	/** 阶段总额（E） */
+	readonly totalValue?: float;
+	/** 道具类型 */
+	readonly type?: string;
+	/** 领取次数（n） */
+	readonly claimTimes?: float;
+	/** 系数(k) */
+	readonly k?: float;
+}
+interface IT_PaypalRewardGradeSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 阶段总额 */
+	readonly totalValue?: float;
+	/** 道具类型 */
+	readonly type?: string;
+	/** 阶段 */
+	readonly groupId?: number;
+	/** 最小随机值 */
+	readonly minValue?: float;
+	/** 最大随机值 */
+	readonly maxValue?: float;
+}
+interface IT_PaypalRewardSetting {
+	/** 阶段（m） */
+	readonly id?: number;
+	/** 阶段总额（E） */
+	readonly totalValue?: float;
+	/** 道具类型 */
+	readonly type?: string;
+	/** 领取次数（n） */
+	readonly claimTimes?: float;
+	/** 系数(k) */
+	readonly k?: float;
+}
+interface IT_SignSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 对应天数 */
+	readonly day?: number;
+	/** 奖励 */
+	readonly reward?: string;
+	/** 奖励资源图片 */
+	readonly res?: string;
+	/** 看视频打点事件 */
+	readonly videoEventName?: string;
+	/** 签到成功打点事件 */
+	readonly finishEventName?: string;
+}
+interface IT_TaskConfigSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 键 */
+	readonly key?: string;
+	/** 值 */
+	readonly value?: string;
+}
+interface IT_TaskSetting {
+	/** 主键 */
+	readonly id?: string;
+	/** 任务图标 */
+	readonly icon?: string;
+	/** 名字 */
+	readonly name?: string;
+	/** 描述 */
+	readonly desc?: string;
+	/** 档次 */
+	readonly grade?: number;
+	/** 成就处理器 */
+	readonly processor?: string;
+	/** 目标次数 */
+	readonly targetValue?: number;
+	/** 奖励类型 */
+	readonly rewardType?: string;
+	/** 奖励数量 */
+	readonly rewardAmount?: float;
+}
+interface IT_PaypalBarSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 奖励 */
+	readonly reward?: string;
+	/** 点击次数 */
+	readonly clickTimes?: number;
+	/** 资源 */
+	readonly res?: string;
+	/** 奖励随机权重id组 */
+	readonly weightIds?: string;
+}
+interface IT_TreeAnimSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 等级要求 */
+	readonly level?: number;
+	/** 预制件名称 */
+	readonly prefabName?: string;
+}
+interface IT_TreeConfigSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 键 */
+	readonly key?: string;
+	/** 值 */
+	readonly value?: string;
+}
+interface IT_TurnSetting {
+	/** 主键 */
+	readonly id?: number;
+	/** 奖励 */
+	readonly reward?: string;
+	/** 权重 */
+	readonly rate?: number;
+	/** 金币图片 */
+	readonly path?: string;
+}

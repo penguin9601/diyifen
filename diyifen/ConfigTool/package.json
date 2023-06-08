@@ -1,0 +1,47 @@
+{
+  "name": "@ailhc/excel2all-cli",
+  "version": "0.2.1",
+  "description": "一个将excel文件转换为typescript声明文件和json工具\nA tool to convert Excel files to TypeScript declaration files and JSON",
+  "author": "AILHC",
+  "license": "MIT",
+  "homepage": "https://github.com/AILHC/EasyGameFrameworkOpen/tree/main/tool-packages/excel2all-cli#readme",
+  "keywords": [
+    "cli",
+    "excel",
+    "json",
+    "typescript",
+    "javascript"
+  ],
+  "files": [
+    "bin",
+    "CHANGELOG.md"
+  ],
+  "bugs": {
+    "url": "https://github.com/AILHC/EasyGameClientFramework/issues"
+  },
+  "bin": {
+    "e2a": "./bin/cli.js"
+  },
+  "main": "bin/cli.js",
+  "scripts": {
+    "test:customCacheDir": "node ./bin/cli.js convert -t ../../excel2all/__test__/test-excel-files -p ./__tests__ -uc cf ./.cache -j ./test-export/bundle.json -cstj ./test-export/export-jsons",
+    "test:nocache": "node ./bin/cli.js convert -t ../../excel2all/__test__/test-excel-files -p ./__tests__ -j ./test-export/bundle.json -cstj ./test-export/export-jsons",
+    "test:convertByConfig": "node ./bin/cli.js convert -p ./__tests__ -c ./testConfig",
+    "test:convertByDefaultConfig": "node ./bin/cli.js convert -p ./__tests__ -c",
+    "test:convertByConfigAndOption": "node ./bin/cli.js convert -p ./__tests__ -c ./testConfig -uc",
+    "test:convertHook": "node ./bin/cli.js convert -t ../../excel2all/__test__/test-excel-files -p ./__tests__ -j ./test-export/bundle.json -cstj ./test-export/export-jsons -cchkp ./testCustomHook.js",
+    "testFileMatch": "node ./bin/cli.js tfm -t ../excel2all/__test__/test-excel-files"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AILHC/EasyGameFrameworkOpen.git"
+  },
+  "dependencies": {
+    "@ailhc/excel2all": "^0.3.3",
+    "commander": "^7.2.0",
+    "glob": "^7.1.7"
+  }
+}
