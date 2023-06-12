@@ -7,17 +7,8 @@ using DG.Tweening;
 
 public class UIController : MonoBehaviour
 {
-	[SerializeField, Tooltip("免费道具面板预制体")]
-	GameObject FreeItemPanelPrefab;
-
 	[SerializeField, Tooltip("成就界面预制件")]
 	public GameObject TaskPanelPrefab;
-
-	[SerializeField, Tooltip("通用领网赚余额界面")]
-	public GameObject CashClaimPanelPrefab;
-
-	[SerializeField, Tooltip("点击票金币文本")]
-	public GameObject ClickMoneyTipsPrefab;
 
 	private static UIController _ins;
 
